@@ -1,5 +1,8 @@
 <template>
-  <el-color-picker v-model="color3" show-alpha></el-color-picker>
+  <div>
+    <div style="margin: 20px 20px 20px 20px;line-height: 100px">{{message}}</div>
+    <el-button style="margin: 20px" type="primary" @click="doClick">旋转</el-button>
+  </div>
 </template>
 
 <script>
@@ -7,7 +10,12 @@ export default {
   name: "index",
   data() {
     return {
-      color3: 'rgba(19, 206, 102, 0.8)'
+      message: "helloword"
+    }
+  },
+  methods: {
+    doClick() {
+      this.message = this.message.split('').reverse().join('')
     }
   }
 }

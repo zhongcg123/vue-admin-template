@@ -43,6 +43,20 @@ export const constantRoutes = [
     hidden: true
   },
   {
+    path: '/',
+    component: Layout,
+    name: '首页',
+    meta: { title: '首页', icon: 'el-icon-menu' },
+    children: [
+      {
+        path: 'table',
+        name: 'Table',
+        component: () => import('@/views/home/index'),
+        meta: { title: '首页', icon: 'table' }
+      }
+    ]
+  },
+  {
     path: '/example',
     component: Layout,
     redirect: '/example/table',
@@ -64,7 +78,7 @@ export const constantRoutes = [
     ]
   },
   {
-    path: '/',
+    path: '/demo',
     component: Layout,
     name: '练习',
     meta: { title: '练习', icon: 'el-icon-menu' },
