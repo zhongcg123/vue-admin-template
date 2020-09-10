@@ -13,9 +13,9 @@ export default {
           this.$message({
             type: 'info',
             message: `action: ${ action }`
-          });
+          })
         }
-      });
+      })
     }
   }
 }

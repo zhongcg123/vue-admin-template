@@ -96,10 +96,10 @@ export const constantRoutes = [
         meta: { title: '练习二', icon: 'el-icon-tickets' }
       },
       {
-        path: 'form',
-        component: () => import('@/views/form/index'),
-        name: 'form',
-        meta: { title: 'Form', icon: 'form' }
+        path: 'demo3',
+        component: () => import('@/views/slot/father'),
+        name: '插槽练习',
+        meta: { title: '插槽练习', icon: 'el-icon-tickets' }
       }
     ]
   },
